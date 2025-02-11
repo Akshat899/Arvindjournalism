@@ -52,10 +52,7 @@ We welcome contributions! Follow these steps:
 
 ## 📧 Contact
 For any queries or feedback:
-- 📩 Email: arvind.singh@example.com *(Replace with actual email)*
-- 🌐 Website: [arvindsinghjournalism.com](#) *(Replace with actual domain)*
-- 🐦 Twitter: [@ArvindSinghNews](#) *(Replace with actual handle)*
-
+- 📩 Email: akshatjha15@gmail.com
 ## 📝 License
 This project is **MIT Licensed**. Feel free to use and modify!
 
