@@ -1,0 +1,378 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    background: #eaeaea;
+    scroll-behavior: smooth;
+    
+}
+header {
+    background: #333;
+    color: white;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px;
+    transition: color 0.3s, transform 0.3s;
+}
+header a:hover {
+    color: #ff9800;
+    transform: scale(1.1);
+}
+main {
+    padding: 20px;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(/Res/Hero-img.jpg) no-repeat center center/cover;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+.content h1 {
+    font-size: 3rem;
+    margin: 0;
+    transition: color 0.3s ease-in-out;
+}
+.content h1:hover {
+    color: lightgray;
+}
+.articles {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+    background: #f4f4f4;
+}
+.article {
+    width: 30%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+.article:hover {
+    transform: translateY(-10px);
+}
+.article img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.article-content {
+    padding: 15px;
+}
+.article-content h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.article-content p {
+    font-size: 1rem;
+    color: #555;
+}
+.stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    color: #777;
+}
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 50px;
+}
+.category {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+.category:hover {
+    transform: translateY(-10px);
+}
+.category img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.category-content {
+    padding: 15px;
+}
+.category-content h2 {
+    margin: 0;
+    font-size: 1.3rem;
+}
+.about-hero {
+    background: url('/Res/about-img.png') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    animation: fadeIn 1.5s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.about-content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.about-content:hover{
+    transform: scale(1.05);
+}
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+    position: relative;
+}
+.slide {
+    min-width: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+.reviews-hero {
+    background: url('/Res/review-hero.jpeg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    animation: fadeIn 1.5s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.reviews-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+.review-panel {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+.review-panel:hover {
+    transform: scale(1.05);
+}
+.reviews-form-container {
+    background: white;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button:hover {
+    background: #e68900;
+}
+.contact-hero {
+    background: url('Res/contact-hero.jpeg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    animation: fadeIn 1.5s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.contact-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+.contact-form {
+    background: white;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.contact-input, .contact-textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contact-button {
+    background: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.contact-button:hover {
+    background: #e68900;
+}
+.contact-details {
+    margin-top: 40px;
+}
+.social-links i {
+    margin: 10px;
+    text-decoration: none;
+    color: #ff9800;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+.social-links a:hover {
+    color: #e68900;
+}
+footer {
+    background: #222;
+    color: white;
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+footer div {
+    margin: 10px;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 5px 0;
+    transition: color 0.3s;
+}
+footer a:hover {
+    color: #ff9800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content h1 {
+        font-size: 2rem;
+    }
+    .articles {
+        flex-direction: column;
+        align-items: center;
+    }
+    .article {
+        width: 90%;
+    }
+    .category {
+        width: 90%;
+    }
+    .categories {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .about-hero {
+        font-size: 2rem;
+        height: 300px;
+    }
+    .about-content, .reviews {
+        width: 90%;
+    }
+    .carousel {
+        width: 90%;
+    }
+    .reviews-hero {
+        font-size: 2rem;
+        height: 300px;
+    }
+    .reviews-container, .reviews-form-container {
+        width: 90%;
+    }
+    .contact-hero {
+        font-size: 2rem;
+        height: 300px;
+    }
+    .contact-container, .contact-form {
+        width: 90%;
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
